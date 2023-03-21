@@ -1,0 +1,19 @@
+<div class="container">
+  <table class="table table-bordered">
+    <thead>
+    <th>ID</th>
+    <th>Tên</th>
+    <th>Địa chỉ</th>
+    <th>Số tiền</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let nguoinop of nguoinopList">
+      <td>{{nguoinop.id}}</td>
+      <td>{{nguoinop.ten}}</td>
+      <td>{{nguoinop.diaChi}}</td>
+      <td>{{nguoinop.soTien | number}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
