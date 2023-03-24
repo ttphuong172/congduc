@@ -13,4 +13,17 @@ export class NguoinopService {
   findAll(){
     return this.httpClient.get(this.apiURL + '/api/nguoinop')
   }
+  save(nguoinop:any){
+    return this.httpClient.post(this.apiURL + '/api/nguoinop',nguoinop)
+  }
+  findById(id: any){
+    return this.httpClient.get(this.apiURL + '/api/nguoinop/' + id)
+  }
+  update(nguoinop:any){
+    return this.httpClient.put(this.apiURL + '/api/nguoinop/' + nguoinop.id,nguoinop)
+  }
+  delete(nguoinop:any){
+    return this.httpClient.delete(this.apiURL + '/api/nguoinop/' + nguoinop.id)
+  }
+
 }

@@ -1,0 +1,53 @@
+<div class="container">
+  <h2 style="text-align: center">CHỈNH SỬA CÔNG ĐỨC</h2>
+
+<div class="row">
+  <div class="col-3">
+
+  </div>
+  <div class="col-6">
+    <form [formGroup] ="nguoinopForm">
+      <div class="row">
+        <div class="col-3">
+          <label>Họ và tên</label>
+        </div>
+        <div class="col-9">
+          <input type="text" class="form-control" formControlName = "ten">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-3">
+          <label>Địa chỉ</label>
+        </div>
+        <div class="col-9">
+          <input type="text" class="form-control" formControlName = "diaChi">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-3">
+          <label>Số tiền</label>
+        </div>
+        <div class="col-9">
+          <input type="text" separator class="form-control" formControlName = "soTien" (keyup.enter)="update()">
+        </div>
+      </div>
+    </form>
+    <br>
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-3"></div>
+      <div class="col-3 ">
+        <button style="width: 100%" class="btn btn-success" (click)="update()" [disabled]="!nguoinopForm.valid">Cập nhật</button>
+      </div>
+      <div class="col-3">
+        <button style="width: 100%" class="btn btn-outline-success" (click)="return()">Hủy</button>
+      </div>
+    </div>
+<!--          {{nguoinopForm.value | json}}-->
+  </div>
+  <div class="col-3">
+  </div>
+</div>
+</div>

@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  // apiURL: 'http://172.16.2.188:8080/devicemanagement',
   apiURL:'http://localhost:8080'
 };
 
